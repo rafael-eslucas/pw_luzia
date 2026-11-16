@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conscientização sobre o Transtorno do Espectro Autista (TEA)</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background-color: #f5f9ff;
+      color: #1e2b3c;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    /* HEADER */
+    header {
+      background-color: #ffffff;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px #b0c4de;
+      padding: 20px 30px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      position: relative;
+      border: 2px solid #2a7faa;
+      margin-bottom: 40px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      margin-right: 40px;
+    }
+
+    .logo-icon {
+      background-color: #1f5e8e;
+      color: white;
+      font-weight: bold;
+      font-size: 22px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 10px #8aacc8;
+      margin-right: 12px;
+    }
+
+    .logo-text h1 {
+      font-size: 22px;
+      color: #0d3b5e;
+      text-shadow: 2px 2px 3px #d0e0f0;
+    }
+
+    .logo-text p {
+      font-size: 13px;
+      color: #3b5e7a;
+      font-weight: bold;
+    }
+
+    nav ul {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0;
+    }
+
+    nav li {
+      margin-right: 20px;
+    }
+
+    nav a {
+      color: #1e4b6e;
+      font-weight: bold;
+      font-size: 16px;
+      padding: 6px 4px;
+      border-bottom: 3px solid #c0d8ec;
+    }
+
+    nav a:hover {
+      color: #0b2c45;
+      border-bottom: 3px solid #2a7faa;
+      text-shadow: 0 0 6px #a0c8e8;
+    }
+
+    /* HERO */
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 30px;
+      box-shadow: 0 15px 30px #c0d4e8;
+      border: 1px solid #b8d2e8;
+      margin-bottom: 50px;
+      position: relative;
+    }
+
+    .hero-text {
+      flex: 1 1 300px;
+      margin-right: 30px;
+      position: relative;
+    }
+
+    .hero-text h2 {
+      font-size: 38px;
+      color: #0b2c45;
+      text-shadow: 2px 2px 5px #cddbe8;
+      margin-bottom: 20px;
+    }
+
+    .hero-text p {
+      font-size: 18px;
+      color: #2a4b6a;
+      margin-bottom: 25px;
+      max-width: 480px;
+    }
+
+    .btn-cta {
+      background-color: #1f6e9c;
+      color: white;
+      font-weight: bold;
+      padding: 14px 34px;
+      border-radius: 30px;
+      font-size: 18px;
+      border: 2px solid #0b3d5e;
+      box-shadow: 0 6px 14px #93b4cf;
+    }
+
+    .btn-cta:hover {
+      background-color: #0f4e73;
+      box-shadow: 0 10px 20px #6f98ba;
+      border: 2px solid #082b42;
+    }
+
+    .hero-image {
+      flex: 1 1 280px;
+      position: relative;
+      text-align: center;
+    }
+
+    .hero-image img {
+      max-width: 100%;
+      border-radius: 25px;
+      box-shadow: 10px 10px 20px #b8cfe2;
+      border: 3px solid white;
+    }
+
+    /* SEÇÕES INFORMATIVAS */
+    .info-section {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 50px;
+    }
+
+    .card-info {
+      background-color: white;
+      border-radius: 25px;
+      padding: 25px;
+      box-shadow: 0 10px 20px #c5d8e8;
+      flex: 1 1 280px;
+      border: 1px solid #c8dcec;
+      margin-right: 20px;
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    .card-info:hover {
+      box-shadow: 0 18px 30px #aac0d6;
+    }
+
+    .card-info h3 {
+      font-size: 24px;
+      color: #144a6e;
+      margin-bottom: 18px;
+      border-left: 8px solid #2a7faa;
+      padding-left: 14px;
+      text-shadow: 1px 1px 2px #dde8f2;
+    }
+
+    .card-info ul {
+      padding-left: 25px;
+    }
+
+    .card-info li {
+      margin-bottom: 10px;
+      font-weight: bold;
+      color: #1e3d57;
+      font-size: 15px;
+    }
+
+    /* TABELA */
+    .table-section {
+      background-color: white;
+      border-radius: 25px;
+      padding: 25px;
+      box-shadow: 0 10px 20px #c5d8e8;
+      flex: 1 1 320px;
+      border: 1px solid #c8dcec;
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    .table-section h3 {
+      font-size: 24px;
+      color: #144a6e;
+      margin-bottom: 18px;
+      border-left: 8px solid #2a7faa;
+      padding-left: 14px;
+    }
+
+    table {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px #d0e0ee;
+    }
+
+    th {
+      background-color: #1f5e8e;
+      color: white;
+      font-weight: bold;
+      padding: 12px;
+      text-align: left;
+      font-size: 15px;
+      border: 1px solid #1f5e8e;
+    }
+
+    td {
+      padding: 12px;
+      border: 1px solid #d4e4f2;
+      color: #1b3d59;
+      font-size: 15px;
+    }
+
+    tr:hover td {
+      background-color: #e8f2fb;
+    }
+
+    /* MÍDIA */
+    .media-section {
+      background-color: white;
+      border-radius: 30px;
+      padding: 35px 25px;
+      margin-bottom: 50px;
+      box-shadow: 0 15px 30px #c0d4e8;
+      border: 1px solid #c0d8ec;
+      position: relative;
+    }
+
+    .media-section h2 {
+      font-size: 28px;
+      color: #0b2c45;
+      margin-bottom: 25px;
+      text-align: center;
+      text-shadow: 2px 2px 4px #d8e4ee;
+    }
+
+    .media-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .media-item {
+      flex: 1 1 230px;
+      max-width: 320px;
+      background-color: #f0f7fe;
+      border-radius: 25px;
+      padding: 15px;
+      box-shadow: 8px 8px 16px #b8cfe2;
+      border: 1px solid #c0d8ec;
+      margin: 10px;
+      text-align: center;
+    }
+
+    .media-item img,
+    .media-item video,
+    .media-item audio {
+      width: 100%;
+      border-radius: 18px;
+      box-shadow: 0 5px 12px #b0c8de;
+      margin-bottom: 10px;
+    }
+
+    .media-item audio {
+      background-color: #dfeefb;
+      padding: 8px;
+    }
+
+    .media-caption {
+      font-weight: bold;
+      color: #1a4a6e;
+      font-size: 15px;
+    }
+
+    /* FOOTER */
+    footer {
+      background-color: #0d2c41;
+      color: #e4eff9;
+      border-radius: 30px 30px 0 0;
+      padding: 35px 25px 20px;
+      margin-top: 30px;
+      box-shadow: 0 -8px 20px #a0bcd0;
+      position: relative;
+    }
+
+    .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 25px;
+    }
+
+    .footer-column {
+      flex: 1 1 200px;
+      margin-right: 25px;
+      margin-bottom: 20px;
+    }
+
+    .footer-column h4 {
+      font-size: 20px;
+      color: #ffffff;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #2a7faa;
+      padding-bottom: 5px;
+      text-shadow: 1px 1px 3px #4a7088;
+    }
+
+    .footer-column p,
+    .footer-column a {
+      color: #b9d4e8;
+      font-size: 15px;
+      margin-bottom: 8px;
+      display: block;
+      font-weight: normal;
+    }
+
+    .footer-column a:hover {
+      color: white;
+      text-shadow: 0 0 6px #7dc3ff;
+    }
+
+    .copyright {
+      text-align: center;
+      border-top: 1px solid #2e506b;
+      padding-top: 18px;
+      font-size: 14px;
+      color: #9dbdd9;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <div class="logo-icon">TEA</div>
+      <div class="logo-text">
+        <h1>Conscientização TEA</h1>
+        <p>Informação e empatia</p>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#hero">Início</a></li>
+        <li><a href="#informacoes">Sobre o TEA</a></li>
+        <li><a href="#dados">Dados</a></li>
+        <li><a href="#midia">Galeria</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+
+    <section id="hero">
+      <div class="hero">
+        <div class="hero-text">
+          <h2>Compreender para incluir</h2>
+          <p>O Transtorno do Espectro Autista (TEA) é uma condição neurológica que afeta a comunicação e interação social. A conscientização transforma vidas e constrói uma sociedade mais justa e acolhedora.</p>
+          <a href="#informacoes" class="btn-cta">Saiba mais</a>
+        </div>
+        <div class="hero-image">
+          <img src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?q=80&w=800&auto=format&fit=crop" alt="Criança autista sorrindo">
+        </div>
+      </div>
+    </section>
+
+    <section id="informacoes">
+      <div class="info-section">
+        <div class="card-info">
+          <h3>O que é o TEA?</h3>
+          <ul>
+            <li>Condição do neurodesenvolvimento</li>
+            <li>Afeta comunicação e interação social</li>
+            <li>Comportamentos repetitivos e interesses restritos</li>
+            <li>Espectro amplo: cada pessoa é única</li>
+            <li>Diagnóstico precoce e apoio fazem a diferença</li>
+          </ul>
+        </div>
+
+        <div class="table-section" id="dados">
+          <h3>Dados sobre o TEA</h3>
+          <table>
+            <tr>
+              <th>Indicador</th>
+              <th>Estimativa</th>
+              <th>Fonte</th>
+            </tr>
+            <tr>
+              <td>Prevalência global</td>
+              <td>1 em 100 crianças</td>
+              <td>OMS (2023)</td>
+            </tr>
+            <tr>
+              <td>Diagnóstico no Brasil</td>
+              <td>~2 milhões de pessoas</td>
+              <td>Ministério da Saúde</td>
+            </tr>
+            <tr>
+              <td>Proporção por gênero</td>
+              <td>4 meninos : 1 menina</td>
+              <td>CDC (2024)</td>
+            </tr>
+            <tr>
+              <td>Intervenção precoce</td>
+              <td>Melhora em 70% dos casos</td>
+              <td>Estudos clínicos</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="midia">
+      <div class="media-section">
+        <h2>Galeria de conscientização</h2>
+        <div class="media-grid">
+          <div class="media-item">
+            <img src="https://images.unsplash.com/photo-1587654780291-39c9404d746b?q=80&w=800&auto=format&fit=crop" alt="Símbolo da neurodiversidade">
+            <div class="media-caption">Símbolo da neurodiversidade</div>
+          </div>
+
+          <div class="media-item">
+            <video controls poster="https://images.unsplash.com/photo-1516627145497-ae6968895b74?q=80&w=800&auto=format&fit=crop">
+              <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+              Seu navegador não suporta vídeo.
+            </video>
+            <div class="media-caption">Vídeo: inclusão e respeito</div>
+          </div>
+
+          <div class="media-item">
+            <audio controls>
+              <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+              Seu navegador não suporta áudio.
+            </audio>
+            <div class="media-caption">Mensagem de conscientização</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer id="contato">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h4>Conscientização TEA</h4>
+          <p>Promovendo informação, empatia e inclusão para pessoas com Transtorno do Espectro Autista.</p>
+        </div>
+        <div class="footer-column">
+          <h4>Navegação</h4>
+          <a href="#hero">Início</a>
+          <a href="#informacoes">Sobre o TEA</a>
+          <a href="#dados">Dados</a>
+          <a href="#midia">Galeria</a>
+        </div>
+        <div class="footer-column">
+          <h4>Contato</h4>
+          <p>contato@tea-conscientizacao.org</p>
+          <p>(11) 9999-8888</p>
+          <p>Atendimento: seg–sex, 9h–18h</p>
+        </div>
+      </div>
+      <div class="copyright">
+        &copy; 2025 Conscientização sobre o TEA. Todos os direitos reservados.
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
