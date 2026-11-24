@@ -3,500 +3,388 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Conscientização sobre o Transtorno do Espectro Autista (TEA)</title>
+  <title>Conscientização sobre o TEA</title>
+
   <style>
     * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      font-family: Arial, Helvetica, sans-serif;
     }
 
     body {
-      background-color: #f5f9ff;
-      color: #1e2b3c;
-      padding: 20px;
+      font-family: Arial, sans-serif;
+      color: #263238;
+      background-color: #f4f8fb;
+      line-height: 1.6;
     }
 
-    .container {
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-
-    /* HEADER */
     header {
-      background-color: #ffffff;
-      border-radius: 20px;
-      box-shadow: 0 8px 20px #b0c4de;
-      padding: 20px 30px;
+      position: static;
+      background-color: #173f5f;
+      color: white;
+      padding: 18px 8%;
+    }
+
+    .topo {
       display: flex;
-      flex-wrap: wrap;
       align-items: center;
-      position: relative;
-      border: 2px solid #2a7faa;
-      margin-bottom: 40px;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
     }
 
     .logo {
-      display: flex;
-      align-items: center;
-      margin-right: 40px;
-    }
-
-    .logo-icon {
-      background-color: #1f5e8e;
-      color: white;
-      font-weight: bold;
-      font-size: 22px;
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 4px 10px #8aacc8;
-      margin-right: 12px;
-    }
-
-    .logo-text h1 {
-      font-size: 22px;
-      color: #0d3b5e;
-      text-shadow: 2px 2px 3px #d0e0f0;
-    }
-
-    .logo-text p {
-      font-size: 13px;
-      color: #3b5e7a;
+      font-size: 1.4rem;
       font-weight: bold;
     }
 
-    nav ul {
+    nav {
       display: flex;
       flex-wrap: wrap;
-      padding: 0;
-    }
-
-    nav li {
-      margin-right: 20px;
+      gap: 18px;
     }
 
     nav a {
-      color: #1e4b6e;
+      color: white;
+      text-decoration: none;
       font-weight: bold;
-      font-size: 16px;
-      padding: 6px 4px;
-      border-bottom: 3px solid #c0d8ec;
     }
 
     nav a:hover {
-      color: #0b2c45;
-      border-bottom: 3px solid #2a7faa;
-      text-shadow: 0 0 6px #a0c8e8;
+      color: #ffd166;
     }
 
-    /* HERO */
     .hero {
+      position: relative;
+      min-height: 400px;
       display: flex;
-      flex-wrap: wrap;
       align-items: center;
-      background-color: #ffffff;
-      padding: 30px;
-      border-radius: 30px;
-      box-shadow: 0 15px 30px #c0d4e8;
-      border: 1px solid #b8d2e8;
-      margin-bottom: 50px;
+      padding: 60px 8%;
+      background-color: #dff3f1;
+      overflow: hidden;
+    }
+
+    .hero-conteudo {
       position: relative;
+      z-index: 1;
+      max-width: 600px;
     }
 
-    .hero-text {
-      flex: 1 1 300px;
-      margin-right: 30px;
-      position: relative;
+    .hero h1 {
+      color: #173f5f;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      line-height: 1.15;
+      text-shadow: 1px 2px 3px #b8d8d5;
+      margin-bottom: 16px;
     }
 
-    .hero-text h2 {
-      font-size: 38px;
-      color: #0b2c45;
-      text-shadow: 2px 2px 5px #cddbe8;
-      margin-bottom: 20px;
+    .hero p {
+      font-size: 1.1rem;
+      margin-bottom: 24px;
     }
 
-    .hero-text p {
-      font-size: 18px;
-      color: #2a4b6a;
-      margin-bottom: 25px;
-      max-width: 480px;
-    }
-
-    .btn-cta {
-      background-color: #1f6e9c;
+    .botao {
+      display: inline-block;
+      background-color: #e07a5f;
       color: white;
+      padding: 12px 20px;
+      border: 2px solid #e07a5f;
+      border-radius: 8px;
+      text-decoration: none;
       font-weight: bold;
-      padding: 14px 34px;
-      border-radius: 30px;
-      font-size: 18px;
-      border: 2px solid #0b3d5e;
-      box-shadow: 0 6px 14px #93b4cf;
     }
 
-    .btn-cta:hover {
-      background-color: #0f4e73;
-      box-shadow: 0 10px 20px #6f98ba;
-      border: 2px solid #082b42;
+    .botao:hover {
+      background-color: #c65f45;
+      border-color: #c65f45;
     }
 
-    .hero-image {
-      flex: 1 1 280px;
-      position: relative;
-      text-align: center;
+    main section {
+      padding: 54px 8%;
     }
 
-    .hero-image img {
-      max-width: 100%;
-      border-radius: 25px;
-      box-shadow: 10px 10px 20px #b8cfe2;
-      border: 3px solid white;
+    .titulo-secao {
+      color: #173f5f;
+      font-size: 2rem;
+      margin-bottom: 18px;
     }
 
-    /* SEÇÕES INFORMATIVAS */
-    .info-section {
+    .cartoes {
       display: flex;
       flex-wrap: wrap;
-      margin-bottom: 50px;
+      gap: 20px;
+      margin-top: 24px;
     }
 
-    .card-info {
-      background-color: white;
-      border-radius: 25px;
-      padding: 25px;
-      box-shadow: 0 10px 20px #c5d8e8;
-      flex: 1 1 280px;
-      border: 1px solid #c8dcec;
-      margin-right: 20px;
-      margin-bottom: 20px;
-      position: relative;
+    .cartao {
+      flex: 1 1 240px;
+      background: white;
+      border: 1px solid #d7e2e8;
+      border-radius: 12px;
+      padding: 22px;
+      box-shadow: 0 4px 12px #173f5f1c;
     }
 
-    .card-info:hover {
-      box-shadow: 0 18px 30px #aac0d6;
+    .cartao:hover {
+      box-shadow: 0 8px 18px #173f5f35;
     }
 
-    .card-info h3 {
-      font-size: 24px;
-      color: #144a6e;
-      margin-bottom: 18px;
-      border-left: 8px solid #2a7faa;
-      padding-left: 14px;
-      text-shadow: 1px 1px 2px #dde8f2;
-    }
-
-    .card-info ul {
-      padding-left: 25px;
-    }
-
-    .card-info li {
+    .cartao h3 {
+      color: #2a7f8e;
       margin-bottom: 10px;
-      font-weight: bold;
-      color: #1e3d57;
-      font-size: 15px;
     }
 
-    /* TABELA */
-    .table-section {
-      background-color: white;
-      border-radius: 25px;
-      padding: 25px;
-      box-shadow: 0 10px 20px #c5d8e8;
-      flex: 1 1 320px;
-      border: 1px solid #c8dcec;
-      margin-bottom: 20px;
-      position: relative;
+    ul {
+      padding-left: 22px;
+      margin-top: 12px;
     }
 
-    .table-section h3 {
-      font-size: 24px;
-      color: #144a6e;
-      margin-bottom: 18px;
-      border-left: 8px solid #2a7faa;
-      padding-left: 14px;
+    .tabela-area {
+      overflow-x: auto;
+      margin-top: 20px;
     }
 
     table {
       width: 100%;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px #d0e0ee;
+      border-collapse: collapse;
+      background: white;
+      border: 1px solid #b8cbd5;
+    }
+
+    th, td {
+      border: 1px solid #b8cbd5;
+      padding: 12px;
+      text-align: left;
     }
 
     th {
-      background-color: #1f5e8e;
+      background-color: #173f5f;
       color: white;
-      font-weight: bold;
-      padding: 12px;
-      text-align: left;
-      font-size: 15px;
-      border: 1px solid #1f5e8e;
     }
 
-    td {
-      padding: 12px;
-      border: 1px solid #d4e4f2;
-      color: #1b3d59;
-      font-size: 15px;
+    tr:nth-child(even) {
+      background-color: #edf5f7;
     }
 
-    tr:hover td {
-      background-color: #e8f2fb;
-    }
-
-    /* MÍDIA */
-    .media-section {
-      background-color: white;
-      border-radius: 30px;
-      padding: 35px 25px;
-      margin-bottom: 50px;
-      box-shadow: 0 15px 30px #c0d4e8;
-      border: 1px solid #c0d8ec;
-      position: relative;
-    }
-
-    .media-section h2 {
-      font-size: 28px;
-      color: #0b2c45;
-      margin-bottom: 25px;
-      text-align: center;
-      text-shadow: 2px 2px 4px #d8e4ee;
-    }
-
-    .media-grid {
+    .galeria {
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
+      align-items: flex-start;
+      gap: 22px;
+      margin-top: 22px;
     }
 
-    .media-item {
-      flex: 1 1 230px;
-      max-width: 320px;
-      background-color: #f0f7fe;
-      border-radius: 25px;
-      padding: 15px;
-      box-shadow: 8px 8px 16px #b8cfe2;
-      border: 1px solid #c0d8ec;
-      margin: 10px;
-      text-align: center;
+    .galeria figure {
+      flex: 1 1 280px;
     }
 
-    .media-item img,
-    .media-item video,
-    .media-item audio {
+    .galeria img,
+    .galeria video,
+    .galeria audio {
       width: 100%;
-      border-radius: 18px;
-      box-shadow: 0 5px 12px #b0c8de;
-      margin-bottom: 10px;
+      border: 3px solid #c7e5e1;
+      border-radius: 10px;
     }
 
-    .media-item audio {
-      background-color: #dfeefb;
-      padding: 8px;
+    figcaption {
+      margin-top: 8px;
+      color: #455a64;
     }
 
-    .media-caption {
-      font-weight: bold;
-      color: #1a4a6e;
-      font-size: 15px;
+    .apoio {
+      background-color: #eaf3f5;
+      border-radius: 12px;
+      padding: 24px;
     }
 
-    /* FOOTER */
+    .apoio a {
+      color: #175d78;
+    }
+
+    .apoio a:hover {
+      color: #c65f45;
+    }
+
     footer {
-      background-color: #0d2c41;
-      color: #e4eff9;
-      border-radius: 30px 30px 0 0;
-      padding: 35px 25px 20px;
-      margin-top: 30px;
-      box-shadow: 0 -8px 20px #a0bcd0;
-      position: relative;
-    }
-
-    .footer-content {
-      display: flex;
-      flex-wrap: wrap;
-      margin-bottom: 25px;
-    }
-
-    .footer-column {
-      flex: 1 1 200px;
-      margin-right: 25px;
-      margin-bottom: 20px;
-    }
-
-    .footer-column h4 {
-      font-size: 20px;
-      color: #ffffff;
-      margin-bottom: 15px;
-      border-bottom: 2px solid #2a7faa;
-      padding-bottom: 5px;
-      text-shadow: 1px 1px 3px #4a7088;
-    }
-
-    .footer-column p,
-    .footer-column a {
-      color: #b9d4e8;
-      font-size: 15px;
-      margin-bottom: 8px;
-      display: block;
-      font-weight: normal;
-    }
-
-    .footer-column a:hover {
+      background-color: #173f5f;
       color: white;
-      text-shadow: 0 0 6px #7dc3ff;
+      padding: 28px 8%;
+      text-align: center;
     }
 
-    .copyright {
-      text-align: center;
-      border-top: 1px solid #2e506b;
-      padding-top: 18px;
-      font-size: 14px;
-      color: #9dbdd9;
+    footer a {
+      color: #ffd166;
+    }
+
+    footer a:hover {
+      color: white;
+    }
+
+    @media (max-width: 600px) {
+      .topo {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        gap: 12px;
+      }
     }
   </style>
 </head>
-<body>
 
+<body>
   <header>
-    <div class="logo">
-      <div class="logo-icon">TEA</div>
-      <div class="logo-text">
-        <h1>Conscientização TEA</h1>
-        <p>Informação e empatia</p>
-      </div>
+    <div class="topo">
+      <div class="logo">TEA: informação e respeito</div>
+      <nav aria-label="Menu principal">
+        <a href="#sobre">Sobre</a>
+        <a href="#caracteristicas">Características</a>
+        <a href="#dados">Informações</a>
+        <a href="#midia">Mídia</a>
+        <a href="#apoio">Apoio</a>
+      </nav>
     </div>
-    <nav>
-      <ul>
-        <li><a href="#hero">Início</a></li>
-        <li><a href="#informacoes">Sobre o TEA</a></li>
-        <li><a href="#dados">Dados</a></li>
-        <li><a href="#midia">Galeria</a></li>
-        <li><a href="#contato">Contato</a></li>
-      </ul>
-    </nav>
   </header>
 
-  <main class="container">
-
-    <section id="hero">
-      <div class="hero">
-        <div class="hero-text">
-          <h2>Compreender para incluir</h2>
-          <p>O Transtorno do Espectro Autista (TEA) é uma condição neurológica que afeta a comunicação e interação social. A conscientização transforma vidas e constrói uma sociedade mais justa e acolhedora.</p>
-          <a href="#informacoes" class="btn-cta">Saiba mais</a>
-        </div>
-        <div class="hero-image">
-          <img src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?q=80&w=800&auto=format&fit=crop" alt="Criança autista sorrindo">
-        </div>
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-conteudo">
+        <h1>Compreender é o primeiro passo para incluir</h1>
+        <p>
+          Cada pessoa autista tem suas próprias características, habilidades
+          e necessidades. Informação e respeito ajudam a construir espaços
+          mais acolhedores para todos.
+        </p>
+        <a class="botao" href="#sobre">Conheça o TEA</a>
       </div>
     </section>
 
-    <section id="informacoes">
-      <div class="info-section">
-        <div class="card-info">
-          <h3>O que é o TEA?</h3>
-          <ul>
-            <li>Condição do neurodesenvolvimento</li>
-            <li>Afeta comunicação e interação social</li>
-            <li>Comportamentos repetitivos e interesses restritos</li>
-            <li>Espectro amplo: cada pessoa é única</li>
-            <li>Diagnóstico precoce e apoio fazem a diferença</li>
-          </ul>
+    <section id="sobre">
+      <h2 class="titulo-secao">O que é o TEA?</h2>
+      <p>
+        O Transtorno do Espectro Autista (TEA) é uma condição do
+        neurodesenvolvimento relacionada à comunicação, à interação social
+        e a padrões de comportamento e interesses. As características e
+        necessidades de apoio variam de uma pessoa para outra.
+      </p>
+    </section>
+
+    <section id="caracteristicas">
+      <h2 class="titulo-secao">Conhecer para acolher</h2>
+      <div class="cartoes">
+        <div class="cartao">
+          <h3>Comunicação e interação</h3>
+          <p>Algumas pessoas podem se comunicar ou interagir de formas diferentes.</p>
         </div>
 
-        <div class="table-section" id="dados">
-          <h3>Dados sobre o TEA</h3>
-          <table>
-            <tr>
-              <th>Indicador</th>
-              <th>Estimativa</th>
-              <th>Fonte</th>
-            </tr>
-            <tr>
-              <td>Prevalência global</td>
-              <td>1 em 100 crianças</td>
-              <td>OMS (2023)</td>
-            </tr>
-            <tr>
-              <td>Diagnóstico no Brasil</td>
-              <td>~2 milhões de pessoas</td>
-              <td>Ministério da Saúde</td>
-            </tr>
-            <tr>
-              <td>Proporção por gênero</td>
-              <td>4 meninos : 1 menina</td>
-              <td>CDC (2024)</td>
-            </tr>
-            <tr>
-              <td>Intervenção precoce</td>
-              <td>Melhora em 70% dos casos</td>
-              <td>Estudos clínicos</td>
-            </tr>
-          </table>
+        <div class="cartao">
+          <h3>Rotinas e interesses</h3>
+          <p>Interesses específicos e preferência por previsibilidade podem fazer parte da experiência de algumas pessoas autistas.</p>
         </div>
+
+        <div class="cartao">
+          <h3>Experiências sensoriais</h3>
+          <p>Sons, luzes, cheiros e texturas podem ser percebidos de maneiras diferentes.</p>
+        </div>
+      </div>
+
+      <h3 style="margin-top: 28px;">Atitudes que ajudam</h3>
+      <ul>
+        <li>Respeite as formas de comunicação de cada pessoa.</li>
+        <li>Evite presumir que todas as pessoas autistas são iguais.</li>
+        <li>Ofereça apoio e pergunte como tornar o ambiente mais acessível.</li>
+        <li>Promova participação e inclusão na escola e na comunidade.</li>
+      </ul>
+    </section>
+
+    <section id="dados">
+      <h2 class="titulo-secao">Informações importantes</h2>
+      <p>
+        A tabela apresenta informações gerais. As características e os apoios
+        necessários são individuais.
+      </p>
+
+      <div class="tabela-area">
+        <table>
+          <thead>
+            <tr>
+              <th>Tema</th>
+              <th>Informação</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Características</td>
+              <td>Podem envolver comunicação, interação social, comportamentos, interesses e experiências sensoriais.</td>
+            </tr>
+            <tr>
+              <td>Avaliação</td>
+              <td>O diagnóstico é feito por profissionais de saúde, considerando a história e as características da pessoa.</td>
+            </tr>
+            <tr>
+              <td>Apoio</td>
+              <td>As formas de acompanhamento devem considerar as necessidades e os objetivos de cada pessoa.</td>
+            </tr>
+            <tr>
+              <td>Inclusão</td>
+              <td>Respeito, acessibilidade e participação contribuem para ambientes mais acolhedores.</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </section>
 
     <section id="midia">
-      <div class="media-section">
-        <h2>Galeria de conscientização</h2>
-        <div class="media-grid">
-          <div class="media-item">
-            <img src="https://images.unsplash.com/photo-1587654780291-39c9404d746b?q=80&w=800&auto=format&fit=crop" alt="Símbolo da neurodiversidade">
-            <div class="media-caption">Símbolo da neurodiversidade</div>
-          </div>
+      <h2 class="titulo-secao">Galeria e recursos</h2>
+      <p>Exemplos de elementos de imagem, vídeo e áudio para compor a página.</p>
 
-          <div class="media-item">
-            <video controls poster="https://images.unsplash.com/photo-1516627145497-ae6968895b74?q=80&w=800&auto=format&fit=crop">
-              <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-              Seu navegador não suporta vídeo.
-            </video>
-            <div class="media-caption">Vídeo: inclusão e respeito</div>
-          </div>
+      <div class="galeria">
+        <figure>
+          <img src="imagem-tea.jpg" alt="Imagem ilustrativa sobre inclusão e respeito">
+          <figcaption>Imagem ilustrativa: inclusão começa com respeito.</figcaption>
+        </figure>
 
-          <div class="media-item">
-            <audio controls>
-              <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
-              Seu navegador não suporta áudio.
-            </audio>
-            <div class="media-caption">Mensagem de conscientização</div>
-          </div>
-        </div>
+        <figure>
+          <video controls>
+            <source src="video-conscientizacao.mp4" type="video/mp4">
+            Seu navegador não consegue reproduzir este vídeo.
+          </video>
+          <figcaption>Vídeo de conscientização. Substitua pelo arquivo de vídeo desejado.</figcaption>
+        </figure>
+
+        <figure>
+          <audio controls>
+            <source src="audio-informativo.mp3" type="audio/mpeg">
+            Seu navegador não consegue reproduzir este áudio.
+          </audio>
+          <figcaption>Áudio informativo. Substitua pelo arquivo de áudio desejado.</figcaption>
+        </figure>
       </div>
     </section>
 
+    <section id="apoio">
+      <div class="apoio">
+        <h2 class="titulo-secao">Informação e apoio</h2>
+        <p>
+          Para informações sobre o TEA e atendimento, procure uma unidade de
+          saúde ou consulte os canais oficiais de saúde.
+        </p>
+        <p>
+          <a href="https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/a/autismo">
+            Acessar informações do Ministério da Saúde
+          </a>
+        </p>
+      </div>
+    </section>
   </main>
 
-  <footer id="contato">
-    <div class="container">
-      <div class="footer-content">
-        <div class="footer-column">
-          <h4>Conscientização TEA</h4>
-          <p>Promovendo informação, empatia e inclusão para pessoas com Transtorno do Espectro Autista.</p>
-        </div>
-        <div class="footer-column">
-          <h4>Navegação</h4>
-          <a href="#hero">Início</a>
-          <a href="#informacoes">Sobre o TEA</a>
-          <a href="#dados">Dados</a>
-          <a href="#midia">Galeria</a>
-        </div>
-        <div class="footer-column">
-          <h4>Contato</h4>
-          <p>contato@tea-conscientizacao.org</p>
-          <p>(11) 9999-8888</p>
-          <p>Atendimento: seg–sex, 9h–18h</p>
-        </div>
-      </div>
-      <div class="copyright">
-        &copy; 2025 Conscientização sobre o TEA. Todos os direitos reservados.
-      </div>
-    </div>
+  <footer>
+    <p>Conscientização sobre o Transtorno do Espectro Autista (TEA)</p>
+    <p>Contato: contato@exemplo.com</p>
+    <p>&copy; 2026 — Página educativa</p>
+    <p><a href="#inicio">Voltar ao início</a></p>
   </footer>
-
 </body>
 </html>
